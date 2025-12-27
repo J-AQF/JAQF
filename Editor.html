@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Editor de Pixel‑Art</title>
+<link rel="stylesheet" href="styles-comun.css">
+<link rel="stylesheet" href="Styles-Editor.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Artifika&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <div class="title-P">
+        <h1 class="titulo-P">Editor de Pixel-Art</h1>
+    </div>
+    <div>
+        <nav class="navegacion">
+            <ul class="navegacion__list">
+                <li class="navegacion__item"><a class="navegacion__link" href="index.html" >Inicio</a></li>
+                <li class="navegacion__item"><a class="navegacion__link" href="Guia.html">Guia</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <aside class="panel">
+    <div class="group">
+        <label>Color</label>
+        <div class="row">
+        <input type="color" id="colorPicker" value="#000000"/>
+        <button id="paint" class="secondary">Pintar</button>
+        <button id="erase" class="secondary">Borrar</button>
+        <button id="eyedrop" class="secondary">Cuentagotas</button>
+        </div>
+    </div>
+    <div class="group">
+        <label>Tamaño de cuadrícula</label>
+        <div class="row">
+        <input type="number" id="gridSize" min="8" max="64" value="32"/>
+        <button id="applyGrid" class="secondary">Aplicar</button>
+    </div>
+    </div>
+    <div class="group">
+        <label>Rejilla</label>
+        <div class="row"><input type="checkbox" id="showGrid" checked/> Mostrar</div>
+    </div>
+    
+    <div class="group row">
+        <button id="undo" class="secondary">Deshacer</button>
+        <button id="redo" class="secondary">Rehacer</button>
+    </div>
+    <div class="group row">
+        <button id="clear">Limpiar</button>
+        <button id="export">Exportar PNG</button>
+    </div>
+    </aside>
+<main>
+    <div class="Titulo-sobre-canvas">
+        <h2 class="Sub-T">Explota tu creatividad</h2>
+    </div>
+    <div class="canvas-wrap">
+        <canvas id="artCanvas" width="640" height="640"></canvas>
+        <canvas id="gridCanvas" width="640" height="640"></canvas>
+    </div>
+    <div class="hint" id="status">Listo</div>
+
+    </main>
+    <script src="script.js"></script>
+
+</div>
+</body>
+</html>
